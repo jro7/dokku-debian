@@ -1,3 +1,8 @@
+# Dokku-Debian
+Modified [progrium/dokku] to run on Debian 7
+
+---------------------
+
 # Dokku
 
 Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.

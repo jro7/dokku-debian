@@ -2,7 +2,13 @@
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
 # latest stable NGINX 1.4.x with websocket support
-add-apt-repository -y ppa:nginx/stable
+if [[ `lsb_release -cs` == "wheezy" ]]; then
+	add-apt-repository 'deb http://nginx.org/packages/debian/ wheezy nginx'
+	wget http://nginx.org/keys/nginx_signing.key
+	cat nginx_signing.key | sudo apt-key add -
+else
+	add-apt-repository -y ppa:nginx/stable
+fi
 apt-get update
 apt-get install -y nginx dnsutils
 

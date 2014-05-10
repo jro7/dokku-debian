@@ -1,6 +1,10 @@
 # Dokku-Debian
 Modified [progrium/dokku] to run on Debian 7
 
+Install Stable:
+
+    $ wget -qO- https://raw.github.com/jro7/dokku-debian/v0.2.3-debian/bootstrap.sh | sudo DOKKU_TAG=v0.2.3-debian bash
+
 ---------------------
 
 # Dokku
